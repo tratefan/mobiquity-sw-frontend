@@ -1,0 +1,18 @@
+@import "src/styles/variables.scss";
+@import "src/styles/mixins.scss";
+
+.item {
+  .title {
+    font-size: 1.275rem;
+    a {
+      color: $theme-text-color-primary;
+      &:hover {
+        color: $theme-text-color-primary;
+      }
+    }
+  }
+
+  .intro {
+    font-size: 0.875rem;
+  }
+}

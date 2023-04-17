@@ -1,0 +1,9 @@
+@import "src/styles/variables.scss";
+
+.main-wrapper {
+  background: #fff;
+
+  .container {
+    max-width: $single-col-max-width;
+  }
+}

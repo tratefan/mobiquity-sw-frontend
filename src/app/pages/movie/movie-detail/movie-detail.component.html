@@ -1,0 +1,29 @@
+<article class="movie-post px-3 py-5 p-md-5">
+  <div *ngIf="movie$ | async as movie" class="container single-col-max-width">
+    <header class="movie-post-header">
+      <h2 class="title mb-2">{{ movie.title }}</h2>
+      <div class="meta mb-3">
+        <span class="date">Released {{ movie.releaseDate | date }}</span>
+        <span class="time">Published {{ movie.created | dateAgo }}</span>
+      </div>
+    </header>
+
+    <div class="movie-post-body">
+      <p>
+        {{ movie.openingCrawl }}
+      </p>
+
+      <h5>Producer(s)</h5>
+      <p>{{ movie.producer }}</p>
+      <h5>Director(s)</h5>
+      <p>{{ movie.director }}</p>
+      <h5 class="mb-3">Characters</h5>
+      <ul>
+        <li *ngFor="let character of movie.characters">
+          <app-character-card [characterId]="character"></app-character-card>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!--//container-->
+</article>

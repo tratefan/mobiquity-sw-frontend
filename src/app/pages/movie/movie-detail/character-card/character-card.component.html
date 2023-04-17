@@ -1,0 +1,8 @@
+<ng-container *ngIf="character$ | async as character; else loadingRef">
+  <a [routerLink]="['/character', character.id]"> {{ character.name }}</a>
+</ng-container>
+<ng-template #loadingRef>
+  <ngx-skeleton-loader
+    [theme]="{ height: '18px', marginBottom: 0, marginTop: 5, width: '150px' }"
+  ></ngx-skeleton-loader
+></ng-template>

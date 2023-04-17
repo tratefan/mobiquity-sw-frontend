@@ -1,0 +1,71 @@
+/* ============= Base ============= */
+
+/*********** Theme Generic **********/
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: $theme-text-color-secondary;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $theme-text-color-primary;
+  font-weight: bold;
+}
+
+a {
+  color: $theme-color-primary;
+
+  &:hover {
+    color: darken($theme-color-primary, 15%);
+  }
+
+  &.no-text-decoration {
+    text-decoration: none;
+  }
+}
+
+a.text-link {
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.single-col-max-width {
+  max-width: $single-col-max-width;
+}
+
+.btn {
+  font-weight: bold;
+  padding: 0.375rem 1rem;
+  height: 2.75rem;
+  outline: none;
+}
+
+.btn:focus,
+.btn.focus {
+  box-shadow: none !important;
+  // @include transition(all 0.4s ease-in-out);
+  outline: none;
+}
+
+.btn-primary {
+  color: #fff;
+  &:hover,
+  &:active {
+    color: #fff;
+    background: darken($theme-color-primary, 5%);
+  }
+}
+
+.theme-bg-light {
+  background: $theme-bg-light !important;
+}
+.theme-bg-dark {
+  background: $theme-bg-dark !important;
+}
